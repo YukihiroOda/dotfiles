@@ -11,5 +11,6 @@
 (add-to-load-path "elisp")
 
 ;; To use Powershell.
-(autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
+(when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
+ (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t))
 
