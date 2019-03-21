@@ -25,6 +25,11 @@
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -35,13 +40,13 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(make-backup-files nil)
- '(package-archives
-   (quote
-    (("melpa" . "https://melpa.org/packages/")
-     ("elpa" . "https://elpa.gnu.org/packages/"))))
  '(package-selected-packages (quote (proof-general haskell-mode tuareg yatex)))
  '(tool-bar-mode nil))
 
+;; To use the Coq Emacs mode, you need to put the following lines in
+;; your .emacs file:
+(setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
+(autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
