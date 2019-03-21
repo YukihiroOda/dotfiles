@@ -16,13 +16,13 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; Add ~\.emacs.d\elisp to load-path.
-(add-to-load-path "elisp" "PG-master")
+(add-to-load-path "elisp")
 
-(load-file "~/.emacs.d/PG-master/generic/proof-site.el")
+(load-file "~/.emacs.d/elpa/proof-general-20190212.1433/generic/proof-site.el")
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
   (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
-  (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe.")
+  (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
   )
 
 
@@ -51,8 +51,8 @@
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:
-(setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
-(autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
+;; (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
+;; (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
