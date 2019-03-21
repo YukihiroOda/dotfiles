@@ -16,11 +16,17 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; Add ~\.emacs.d\elisp to load-path.
-(add-to-load-path "elisp")
+(add-to-load-path "elisp" "PG-master")
 
-;; To use Powershell.
+(load-file "~/.emacs.d/PG-master/generic/proof-site.el")
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
- (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t))
+  ;; To use Powershell.
+  (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
+  (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe.")
+  )
+
+
+
 
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
