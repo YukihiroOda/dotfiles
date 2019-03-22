@@ -25,9 +25,6 @@
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
   )
 
-
-
-
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 
@@ -46,8 +43,13 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(make-backup-files nil)
- '(package-selected-packages (quote (proof-general haskell-mode tuareg yatex)))
+ '(package-selected-packages (quote (ddskk proof-general haskell-mode tuareg yatex)))
  '(tool-bar-mode nil))
+
+(when (require 'skk nil t)
+  (global-set-key (kbd "C-x j") 'skk-auto-fill-mode) ;;良い感じに改行を自動入力してくれる機能
+  (setq default-input-method "japanese-skk")         ;;emacs上での日本語入力にskkをつかう
+  (require 'skk-study))     
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:
