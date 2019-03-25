@@ -43,8 +43,14 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(make-backup-files nil)
- '(package-selected-packages (quote (proof-general haskell-mode tuareg yatex)))
+ '(package-selected-packages
+   (quote
+    (git-gutter magit proof-general haskell-mode tuareg yatex)))
  '(tool-bar-mode nil))
+
+(when (require 'git-gutter nil t)
+  (global-git-gutter-mode t)
+  )
 
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
