@@ -1,10 +1,7 @@
 ;;; async-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "async" "../../../../../.emacs.d/elpa/async-20181224.454/async.el"
 ;;;;;;  "cc3c9e93fbc03672508c2a0786115aca")
@@ -69,14 +66,6 @@ returns nil.  It can still be useful, however, as an argument to
 `async-ready' or `async-wait'.
 
 \(fn START-FUNC &optional FINISH-FUNC)" nil nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "async" "../../../../../.emacs.d/elpa/async-20181224.454/async.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/async-20181224.454/async.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "async" '("async-")))
-
-;;;***
 
 ;;;***
 
@@ -113,15 +102,6 @@ Byte compile Lisp code FILE asynchronously.
 Same as `byte-compile-file' but asynchronous.
 
 \(fn FILE)" t nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "async-bytecomp"
-;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/async-bytecomp.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/async-20181224.454/async-bytecomp.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "async-bytecomp" '("async-byte")))
-
-;;;***
 
 ;;;***
 
@@ -163,24 +143,6 @@ Run ‘dired-do-hardlink’ asynchronously.
 Run ‘dired-do-rename’ asynchronously.
 
 \(fn &optional ARG)" t nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "dired-async"
-;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/dired-async.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/async-20181224.454/dired-async.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dired-async" '("dired-async-")))
-
-;;;***
-
-;;;***
-
-;;;### (autoloads "actual autoloads are elsewhere" "smtpmail-async"
-;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/smtpmail-async.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/async-20181224.454/smtpmail-async.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "smtpmail-async" '("async-smtpmail-")))
 
 ;;;***
 
@@ -190,7 +152,7 @@ Run ‘dired-do-rename’ asynchronously.
 ;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/async.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/dired-async.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/async-20181224.454/smtpmail-async.el")
-;;;;;;  (0 0 0 0))
+;;;;;;  (23705 58993 370601 668000))
 
 ;;;***
 
@@ -198,6 +160,5 @@ Run ‘dired-do-rename’ asynchronously.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; async-autoloads.el ends here

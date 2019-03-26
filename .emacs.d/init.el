@@ -16,13 +16,19 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; Add ~\.emacs.d\elisp to load-path.
-(add-to-load-path "elisp")
+(add-to-load-path "elisp" "elpa")
 
 (load-file "~/.emacs.d/elpa/proof-general-20190212.1433/generic/proof-site.el")
+;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
   (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
+  ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
+  ;; To use git-gutter
+  (when (require 'git-gutter nil t)
+    (global-git-gutter-mode t)
+    )
   )
 
 (set-language-environment "Japanese")
@@ -45,13 +51,8 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (git-gutter magit proof-general haskell-mode tuareg yatex)))
+    (magit git-gutter proof-general haskell-mode tuareg yatex)))
  '(tool-bar-mode nil))
-
-(when (require 'git-gutter nil t)
-  (global-git-gutter-mode t)
-  )
-
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:

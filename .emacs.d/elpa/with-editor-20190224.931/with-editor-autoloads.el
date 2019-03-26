@@ -1,10 +1,7 @@
 ;;; with-editor-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "with-editor" "../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor.el"
 ;;;;;;  "786676320f7f2398f48630103f5d104e")
@@ -82,22 +79,13 @@ If COMMAND ends with \"&\" behave like the latter,
 else like the former.
 
 \(fn COMMAND &optional OUTPUT-BUFFER ERROR-BUFFER ENVVAR)" t nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "with-editor"
-;;;;;;  "../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "with-editor" '("with-editor" "start-file-process--with-editor-process-filter" "server-" "shell-command--shell-command-with-editor-mode")))
-
-;;;***
 
 ;;;***
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor-autoloads.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor-pkg.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/with-editor-20190224.931/with-editor.el")
-;;;;;;  (0 0 0 0))
+;;;;;;  (23705 59081 13974 572000))
 
 ;;;***
 
@@ -105,6 +93,5 @@ else like the former.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; with-editor-autoloads.el ends here

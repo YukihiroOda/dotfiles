@@ -1,10 +1,7 @@
 ;;; git-commit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "git-commit" "../../../../../.emacs.d/elpa/git-commit-20190319.2352/git-commit.el"
 ;;;;;;  "f3219d7658559235035ea57f0e7cc003")
@@ -40,20 +37,12 @@ provide such a commit message.
 
 
 \(fn)" nil nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "git-commit" "../../../../../.emacs.d/elpa/git-commit-20190319.2352/git-commit.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../../.emacs.d/elpa/git-commit-20190319.2352/git-commit.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "git-commit" '("git-commit-")))
-
-;;;***
 
 ;;;***
 
 ;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/git-commit-20190319.2352/git-commit-autoloads.el"
 ;;;;;;  "../../../../../.emacs.d/elpa/git-commit-20190319.2352/git-commit.el")
-;;;;;;  (0 0 0 0))
+;;;;;;  (23705 59083 277960 697000))
 
 ;;;***
 
@@ -61,6 +50,5 @@ provide such a commit message.
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; git-commit-autoloads.el ends here
