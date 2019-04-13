@@ -29,7 +29,7 @@
   )
 
 (set-language-environment "Japanese")
-(prefer-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-unix)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
