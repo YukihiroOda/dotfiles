@@ -49,13 +49,13 @@
  '(package-selected-packages
    (quote
     (git-gutter magit proof-general haskell-mode tuareg yatex)))
- '(tool-bar-mode nil)
+ '(tool-bar-mode nil))
  ;; To use git-gutter
  (when (require 'git-gutter nil t)
    (global-git-gutter-mode t)
    )
  ;; show-paren-mode
- (show-paren-mode t))
+ (show-paren-mode t)
 
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
