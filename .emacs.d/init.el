@@ -4,6 +4,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+
 ;;Define the function to add load-path.
 
 (defun add-to-load-path (&rest paths)
@@ -25,10 +26,6 @@
   (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
   ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
-  ;; To use git-gutter
-  (when (require 'git-gutter nil t)
-    (global-git-gutter-mode t)
-    )
   )
 
 (set-language-environment "Japanese")
@@ -51,13 +48,20 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (magit git-gutter proof-general haskell-mode tuareg yatex)))
- '(tool-bar-mode nil))
+    (git-gutter magit proof-general haskell-mode tuareg yatex)))
+ '(tool-bar-mode nil)
+ ;; To use git-gutter
+ (when (require 'git-gutter nil t)
+   (global-git-gutter-mode t)
+   )
+ ;; show-paren-mode
+ (show-paren-mode t))
+
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:
-;; (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
-;; (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
+ (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
+ (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -65,3 +69,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;C-x C-e eval
