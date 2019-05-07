@@ -71,3 +71,4 @@
  )
 
 ;;C-x C-e eval
+(put 'downcase-region 'disabled nil)
