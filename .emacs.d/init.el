@@ -48,7 +48,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (git-gutter magit proof-general haskell-mode tuareg yatex)))
+    (auto-complete git-gutter magit proof-general haskell-mode tuareg yatex)))
  '(tool-bar-mode nil))
  ;; To use git-gutter
  (when (require 'git-gutter nil t)
@@ -56,6 +56,13 @@
    )
  ;; show-paren-mode
  (show-paren-mode t)
+
+;;auto-complete
+(when (require 'auto-complete-config nil t)
+  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+  (ac-config-default)
+  (setq ac-use-menu-map t)
+  (setq ac-ignore-case nil))
 
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
