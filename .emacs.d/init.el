@@ -29,6 +29,8 @@
   )
 
 (set-language-environment "Japanese")
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
 (prefer-coding-system 'utf-8-unix)
 
 (require 'package)
