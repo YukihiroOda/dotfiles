@@ -56,6 +56,9 @@
 ;; magit-status key bind
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; compile key bind
+(global-set-key (kbd "C-x c") 'compile)
+
 
 ;; To use git-gutter
 (when (require 'git-gutter nil t)
