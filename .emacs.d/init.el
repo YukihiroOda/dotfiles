@@ -106,12 +106,12 @@
  (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
  (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; 半角英字設定
+(set-face-attribute 'default nil :family "Consolas" :height 100)
+;; 全角かな設定
+;; (set-fontset-font (frame-parameter nil 'font)
+;;                   'japanese-jisx0208
+;;                   (font-spec :family "IPAゴシック" :size 14))
 
 ;;C-x C-e eval
 (put 'downcase-region 'disabled nil)
