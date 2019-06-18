@@ -107,7 +107,7 @@
  (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 ;; 半角英字設定
-(set-face-attribute 'default nil :family "Consolas" :height 100)
+(set-face-attribute 'default nil :family "Consolas" :height 125)
 ;; 全角かな設定
 ;; (set-fontset-font (frame-parameter nil 'font)
 ;;                   'japanese-jisx0208
