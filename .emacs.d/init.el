@@ -26,6 +26,14 @@
   (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
   ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
+  ;; aspell のインストールパス
+  (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
+  (require 'ispell)
+  ;; スペルチェックに aspell を使う
+  (setq ispell-program-name "aspell")
+  ;; 日本語と英語の共存設定
+  (eval-after-load "ispell"
+    '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
   )
 
 (set-language-environment "Japanese")
@@ -112,6 +120,7 @@
 ;; (set-fontset-font (frame-parameter nil 'font)
 ;;                   'japanese-jisx0208
 ;;                   (font-spec :family "IPAゴシック" :size 14))
+
 
 ;;C-x C-e eval
 (put 'downcase-region 'disabled nil)
