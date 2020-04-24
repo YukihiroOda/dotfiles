@@ -19,7 +19,8 @@
 ;; Add ~\.emacs.d\elisp to load-path.
 (add-to-load-path "elisp" "elpa")
 
-(load-file "~/.emacs.d/elpa/proof-general-20190212.1433/generic/proof-site.el")
+;; (load-file "~/.emacs.d/elpa/proof-general-20190212.1433/generic/proof-site.el")
+
 ;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
