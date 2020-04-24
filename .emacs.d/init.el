@@ -50,7 +50,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (yatex auctex auto-complete git-gutter magit proof-general haskell-mode tuareg)))
+    (git-gutter magit yatex auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; magit-status key bind
@@ -122,3 +122,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(unless (cl-member 'cp65001 coding-system-list)
+  (define-coding-system-alias 'cp65001 'utf-8))
