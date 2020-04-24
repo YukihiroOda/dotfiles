@@ -118,3 +118,7 @@ fi
 
 PATH="$PATH":$HOME/bin
 LANG=en_GB.utf8
+
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
