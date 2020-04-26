@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$PATH":$HOME/bin
+PATH="$PATH":$HOME/bin:$HOME/bin/SATySfi
 LANG=en_GB.utf8
 
 eval $(thefuck --alias)
