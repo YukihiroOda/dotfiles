@@ -116,8 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$PATH":$HOME/bin:$HOME/bin/SATySfi
-LANG=en_GB.utf8
+PATH="$PATH":$HOME/bin:$HOME/bin/SATySfi; export PATH
+LANG=ja_JP.UTF-8; export LANG
+
 
 eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
