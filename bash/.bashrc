@@ -118,7 +118,8 @@ fi
 
 PATH="$PATH":$HOME/bin:$HOME/bin/SATySfi; export PATH
 LANG=ja_JP.UTF-8; export LANG
-
+LANGUAGE="ja_JP.UTF-8"; export LANGUAGE
+LC_ALL="ja_JP.UTF-8"; export LC_ALL
 
 eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
