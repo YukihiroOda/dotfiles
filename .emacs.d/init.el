@@ -28,6 +28,10 @@
   ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
   )
+;; To use utf-8 in Windows
+(unless (cl-member 'cp65001 coding-system-list)
+  (define-coding-system-alias 'cp65001 'utf-8))
+
 
 (set-language-environment "Japanese")
 (set-terminal-coding-system 'utf-8-unix)
@@ -124,5 +128,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-(unless (cl-member 'cp65001 coding-system-list)
-  (define-coding-system-alias 'cp65001 'utf-8))
+;; ;; I don't like to split a window horizontally
+;; (setq split-height-threshold nil)
