@@ -55,7 +55,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (git-gutter magit yatex auctex auto-complete proof-general haskell-mode tuareg)))
+    (markdown-mode git-gutter magit yatex auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; magit-status key bind
