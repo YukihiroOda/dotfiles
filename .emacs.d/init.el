@@ -27,10 +27,11 @@
   (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
   ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
+  ;; To use utf-8 in Windows
+  (unless (cl-member 'cp65001 coding-system-list)
+    (define-coding-system-alias 'cp65001 'utf-8))
   )
-;; To use utf-8 in Windows
-(unless (cl-member 'cp65001 coding-system-list)
-  (define-coding-system-alias 'cp65001 'utf-8))
+
 
 
 (set-language-environment "Japanese")
