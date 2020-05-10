@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$PATH":$HOME/bin:$HOME/bin/SATySfi; export PATH
+PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
 LANG=ja_JP.UTF-8; export LANG
 LANGUAGE="ja_JP.UTF-8"; export LANGUAGE
 
