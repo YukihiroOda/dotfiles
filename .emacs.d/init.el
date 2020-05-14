@@ -87,6 +87,7 @@
 (setq tex-command "platex")
 (setq makeindex-command "mendex")
 (setq auto-mode-alist (cons (cons ".tex$" 'yatex-mode) auto-mode-alist))
+(setq auto-mode-alist (cons (cons ".ltx$" 'yatex-mode) auto-mode-alist))
 (setq YaTeX-kanji-code 3) ;EUC-code
 (setq YaTeX-need-nonstop t)
 ;; yatex-mode-hook の設定
