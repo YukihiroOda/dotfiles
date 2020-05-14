@@ -123,5 +123,5 @@ eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
 
 
-[type -a fortune] && fortune
+[ type -a fortune ] && fortune
 
