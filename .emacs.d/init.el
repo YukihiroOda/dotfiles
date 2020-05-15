@@ -30,6 +30,9 @@
   ;; To use utf-8 in Windows
   (unless (cl-member 'cp65001 coding-system-list)
     (define-coding-system-alias 'cp65001 'utf-8))
+  ;; To use wsl
+  (setq shell-file-name (executable-find "bash"))
+  (setq grep-use-null-device nil)
   )
 
 
