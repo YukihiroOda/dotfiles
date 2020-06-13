@@ -33,6 +33,16 @@
   ;; To use wsl
   (setq shell-file-name (executable-find "bash"))
   (setq grep-use-null-device nil)
+  ;; 半角英字設定
+  (set-face-attribute 'default nil :family "Arial" :height 125)
+  ;; 全角かな設定
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (font-spec :family "游ゴシック" :size 14))
+  )
+
+;; Settings to use only in Linux system.
+(when (eq system-type 'gnu/linux)
   )
 
 
