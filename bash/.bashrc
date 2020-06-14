@@ -118,9 +118,9 @@ fi
 
 PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
 
-[ type -a thefuck ] || {
+[ type -a thefuck ] && {
     eval $(thefuck --alias)
-# You can use whatever you want as an alias, like for Mondays:
+    # You can use whatever you want as an alias, like for Mondays:
     eval $(thefuck --alias FUCK)
 }
 
