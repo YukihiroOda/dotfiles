@@ -69,7 +69,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (markdown-mode git-gutter magit yatex auctex auto-complete proof-general haskell-mode tuareg)))
+    (async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; magit-status key bind
@@ -111,6 +111,11 @@
 			  "(appendix|documentstyle|part|chapter|" "section|subsection|subsubsection|" "paragraph|subparagraph)" "*?[ t]*[[{]"))
 	    (make-local-variable 'outline-regexp) ))
 (setq dvi2-command "xdvi -geo +0+0 -s 6")
+
+;;; YaHTML-mode -----------------------------------------
+(setq auto-mode-alist
+      (cons (cons ".html$" 'yahtml-mode) auto-mode-alist))
+(autoload 'yahtml-mode "yahtml" "Yet Another HTML mode" t)
 
 ;;; AUCTeX-mode ------------------------------
 (require 'tex-site)
