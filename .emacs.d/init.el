@@ -43,6 +43,12 @@
 
 ;; Settings to use only in Linux system.
 (when (eq system-type 'gnu/linux)
+  ;; 半角英字設定
+  ;; (set-face-attribute 'default nil :family "Consolas" :height 125) 
+  ;; 全角かな設定
+  ;; (set-fontset-font (frame-parameter nil 'font)
+  ;;                   'japanese-jisx0208
+  ;;                   (font-spec :family "IPAゴシック" :size 14))
   )
 
 
@@ -131,14 +137,12 @@
  (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
  (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
-;; 半角英字設定
-(set-face-attribute 'default nil :family "Consolas" :height 125)
-;; 全角かな設定
-;; (set-fontset-font (frame-parameter nil 'font)
-;;                   'japanese-jisx0208
-;;                   (font-spec :family "IPAゴシック" :size 14))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;C-x C-e eval
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
@@ -148,5 +152,3 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; ;; I don't like to split a window horizontally
-;; (setq split-height-threshold nil)
