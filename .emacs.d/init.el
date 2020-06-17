@@ -51,8 +51,6 @@
   ;;                   (font-spec :family "IPAゴシック" :size 14))
   )
 
-
-
 (set-language-environment "Japanese")
 (set-terminal-coding-system 'utf-8-unix)
 (set-keyboard-coding-system 'utf-8-unix)
@@ -62,7 +60,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t)
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -107,7 +104,7 @@
 (setq makeindex-command "mendex")
 (setq auto-mode-alist (cons (cons ".tex$" 'yatex-mode) auto-mode-alist))
 (setq auto-mode-alist (cons (cons ".ltx$" 'yatex-mode) auto-mode-alist))
-(setq YaTeX-kanji-code 3) ;EUC-code
+(setq YaTeX-kanji-code 4) ;utf-8
 (setq YaTeX-need-nonstop t)
 ;; yatex-mode-hook の設定
 (add-hook 'yatex-mode-hook
