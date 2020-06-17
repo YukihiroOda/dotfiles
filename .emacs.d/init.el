@@ -44,7 +44,7 @@
 ;; Settings to use only in Linux system.
 (when (eq system-type 'gnu/linux)
   ;; 半角英字設定
-  ;; (set-face-attribute 'default nil :family "Consolas" :height 125) 
+  (set-face-attribute 'default nil :family "Consolas" :height 125) 
   ;; 全角かな設定
   ;; (set-fontset-font (frame-parameter nil 'font)
   ;;                   'japanese-jisx0208
@@ -91,7 +91,7 @@
   )
 
 ;; show-paren-mode
- (show-paren-mode t)
+(show-paren-mode t)
 
 ;;auto-complete
 (when (require 'auto-complete-config nil t)
@@ -134,8 +134,8 @@
 
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:
- (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
- (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
+(setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
+(autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
