@@ -17,7 +17,7 @@
   "launchMode": "maximized",
   
   // If enabled, selections are automatically copied to your clipboard.
-  "copyOnSelect": false,
+  "copyOnSelect": true,
 
   // If enabled, formatted data is also copied to your clipboard
   "copyFormatting": false,
