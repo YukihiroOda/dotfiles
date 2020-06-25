@@ -1,6 +1,18 @@
-personal_ws-1.1 en 1 
+personal_ws-1.1 en 17 
+wsl
+utf
+yatex
+YaTeX
 sequent
-unary
-pre
+coq
 Subst
+pre
+aspell
+Powershell
+init
+pLaTeX
+platex
 ary
+LaTeX
+unary
+flyspell
