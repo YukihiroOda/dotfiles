@@ -149,14 +149,16 @@
  (lambda (hook)
    (add-hook hook 'flyspell-prog-mode))
  '( ;; ここに書いたモードではコメント領域のところだけflyspell-mode が有効になる
-   emacs-lisp-mode-hook                 
+   emacs-lisp-mode-hook
    ))
 (mapc
  (lambda (hook)
    (add-hook hook
              '(lambda () (flyspell-mode 1))))
  '( ;; ここに書いたモードではflyspell-mode が有効になる
-   yatex-mode-hook     
+   yatex-mode-hook
+   git-commit-setup-hook
+   git-commit-turn-on-flyspell
    ))
 
 ;;C-x C-e eval
