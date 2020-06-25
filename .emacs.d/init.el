@@ -33,6 +33,10 @@
   ;; To use wsl
   (setq shell-file-name (executable-find "bash"))
   (setq grep-use-null-device nil)
+  ;; To use aspell
+  (setq-default ispell-program-name "~/.emacs.d/aspell.cmd")
+  (with-eval-after-load "ispell"
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
   ;; 半角英字設定
   (set-face-attribute 'default nil :family "Arial" :height 125)
   ;; 全角かな設定
@@ -97,6 +101,7 @@
   (setq ac-use-menu-map t)
   (setq ac-ignore-case nil))
 
+;;; flyspell-mode -------------
 
 ;;; YaTeX-mode ------------------------------
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
