@@ -53,6 +53,10 @@
   ;; (set-fontset-font (frame-parameter nil 'font)
   ;;                   'japanese-jisx0208
   ;;                   (font-spec :family "IPAゴシック" :size 14))
+  ;; To use aspell
+  (setq-default ispell-program-name "aspell")
+  (with-eval-after-load "ispell"
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
   )
 
 (set-language-environment "Japanese")
@@ -101,7 +105,6 @@
   (setq ac-use-menu-map t)
   (setq ac-ignore-case nil))
 
-;;; flyspell-mode -------------
 
 ;;; YaTeX-mode ------------------------------
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
@@ -140,6 +143,21 @@
 (autoload 'coq-mode "coq" "Major mode for editing Coq vernacular." t)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;;; flyspell-mode -------------
+(mapc
+ (lambda (hook)
+   (add-hook hook 'flyspell-prog-mode))
+ '( ;; ここに書いたモードではコメント領域のところだけflyspell-mode が有効になる
+   emacs-lisp-mode-hook                 
+   ))
+(mapc
+ (lambda (hook)
+   (add-hook hook
+             '(lambda () (flyspell-mode 1))))
+ '( ;; ここに書いたモードではflyspell-mode が有効になる
+   yatex-mode-hook     
+   ))
 
 ;;C-x C-e eval
 
