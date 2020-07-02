@@ -31,7 +31,7 @@
     "defaults":
     {
       // Put settings here that you want to apply to all profiles.
-      "fontFace": "Consolas",
+      "fontFace": "Roboto Mono",
       "fontSize": "20"
     },
     "list":
