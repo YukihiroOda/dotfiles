@@ -38,7 +38,7 @@
   (with-eval-after-load "ispell"
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
   ;; 半角英字設定
-  (set-face-attribute 'default nil :family "Century" :height 125)
+  (set-face-attribute 'default nil :family "Roboto Mono" :height 125)
   ;; 全角かな設定
   (set-fontset-font (frame-parameter nil 'font)
                     'japanese-jisx0208
@@ -48,7 +48,7 @@
 ;; Settings to use only in Linux system.
 (when (eq system-type 'gnu/linux)
   ;; 半角英字設定
-  (set-face-attribute 'default nil :family "Consolas" :height 125) 
+  (set-face-attribute 'default nil :family "Roboto Mono" :height 125) 
   ;; 全角かな設定
   ;; (set-fontset-font (frame-parameter nil 'font)
   ;;                   'japanese-jisx0208
