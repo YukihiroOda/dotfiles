@@ -137,6 +137,14 @@
 (setq-default TeX-master nil)
 (setq TeX-parse-self t)
 
+;;; BibTeX-mode -------------------------------------------------------
+(setq bibtex-user-optional-fields
+      '(("annote" "Personal annotation (ignored)")
+	("yomi" "Yomigana")
+	("location" "where it is (ignored)")
+	("memo" "Memorundum (ignored)")
+	))
+
 ;; To use the Coq Emacs mode, you need to put the following lines in
 ;; your .emacs file:
 (setq auto-mode-alist (cons '("\\.v$" . coq-mode) auto-mode-alist))
@@ -145,6 +153,7 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;; flyspell-mode -------------
+(setq ispell-list-command "--list")
 (mapc
  (lambda (hook)
    (add-hook hook 'flyspell-prog-mode))
@@ -153,13 +162,11 @@
    ))
 (mapc
  (lambda (hook)
-   (add-hook hook
-             '(lambda () (flyspell-mode 1))))
+   (add-hook hook (lambda () (flyspell-mode 1))))
  '( ;; ここに書いたモードではflyspell-mode が有効になる
-   yatex-mode-hook
-   git-commit-setup-hook
-   git-commit-turn-on-flyspell
+   yatex-mode-hook bibtex-mode-hook git-commit-setup-hook git-commit-turn-on-flyspell
    ))
+
 
 ;;C-x C-e eval
 
