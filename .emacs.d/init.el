@@ -112,6 +112,7 @@
 (setq makeindex-command "mendex")
 (setq auto-mode-alist (cons (cons ".tex$" 'yatex-mode) auto-mode-alist))
 (setq auto-mode-alist (cons (cons ".ltx$" 'yatex-mode) auto-mode-alist))
+(setq auto-mode-alist (cons (cons ".sty$" 'yatex-mode) auto-mode-alist))
 (setq YaTeX-kanji-code 4) ;utf-8
 (setq YaTeX-need-nonstop t)
 ;; yatex-mode-hook の設定
