@@ -168,6 +168,8 @@
    yatex-mode-hook bibtex-mode-hook git-commit-setup-hook git-commit-turn-on-flyspell
    ))
 
+;; Change window previous
+(global-set-key (kbd "C-x p") (lambda () (interactive) (other-window -1)))
 
 ;;C-x C-e eval
 
