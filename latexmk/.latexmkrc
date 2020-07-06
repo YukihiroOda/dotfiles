@@ -1,13 +1,15 @@
 #!/usr/bin/env perl
-$latex = 'lualatex %O -synctex=1 %S -halt-on-error';
-$latex_silent = 'lualatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
-$pdflatex = 'pdflatex %O -synctex=1 %S -halt-on-error';
-$lualatex = 'lualatex %O -synctex=1 %S -halt-on-error';
-$xelatex = 'xelatex %O -synctex=1 %S -halt-on-error';
+$latex = 'platex %O -synctex=1 %S -halt-on-error';
+$latex_silent = 'platex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
+$pdflatex = 'lualatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
+$lualatex = 'lualatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
+$xelatex = 'xelatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
+
 $biber = 'biber %O --bblencoding=utf8 -u -U --output_safechars %B';
 $bibtex = 'upbibtex %O %B';
+
 $makeindex = 'upmendex %O -o %D %S';
-$max_repeat = 5;
+$max_repeat = 6;
 $dvipdf = 'dvipdfmx %O -o %D %S';
 $dvips = 'dvips %O -z -f %S | convbkmk -u > %D';
 $ps2pdf = 'ps2pdf.exe %O %S %D';
