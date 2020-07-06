@@ -20,8 +20,11 @@ if ($^O eq 'MSWin32') {
   elsif (-f 'C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe') {
     $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
   }
-  elsif (-f "~\AppData\Local\SumatraPDF\SumatraPDF.exe") {
-      $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+  elsif (-f "~/AppData/Local/SumatraPDF/SumatraPDF.exe") {
+      $pdf_previewer = '"~/AppData/Local/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+  }
+  elsif (-f "C:/SumatraPDF/SumatraPDF.exe") {
+      $pdf_previewer = '"C:/SumatraPDF/SumatraPDF.exe" -reuse-instance';
   }
   else {
     $pdf_previewer = 'texworks';
