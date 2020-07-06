@@ -13,20 +13,25 @@ $dvips = 'dvips %O -z -f %S | convbkmk -u > %D';
 $ps2pdf = 'ps2pdf.exe %O %S %D';
 $pdf_mode = 3;
 
-# if ($^O eq 'MSWin32') {
-#   if (-f 'C:/Program Files/SumatraPDF/SumatraPDF.exe') {
-#     $pdf_previewer = '"C:/Program Files/SumatraPDF/SumatraPDF.exe" -reuse-instance';
-#   }
-#   elsif (-f 'C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe') {
-#     $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
-#   }
-#   elsif (-f "~\AppData\Local\SumatraPDF\SumatraPDF.exe") {
-#       $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
-#   }
-#   else {
-#     $pdf_previewer = 'texworks';
-#   }
-# }
-# else {
-#   $pdf_previewer = 'evince';
-# }
+if ($^O eq 'MSWin32') {
+  if (-f 'C:/Program Files/SumatraPDF/SumatraPDF.exe') {
+    $pdf_previewer = '"C:/Program Files/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+  }
+  elsif (-f 'C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe') {
+    $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+  }
+  elsif (-f "~\AppData\Local\SumatraPDF\SumatraPDF.exe") {
+      $pdf_previewer = '"C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+  }
+  else {
+    $pdf_previewer = 'texworks';
+  }
+}
+else {
+    if (-f "/mnt/c/SumatraPDF/SumatraPDF.exe"){ # for wsl settings
+	$pdf_previewer = '"/mnt/c/SumatraPDF/SumatraPDF.exe" -reuse-instance';
+    }
+    else {
+	$pdf_previewer = 'evince';
+    }
+}
