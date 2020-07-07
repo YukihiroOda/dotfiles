@@ -124,6 +124,12 @@ PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
     eval $(thefuck --alias FUCK)
 }
 
+#For WSL
+[ type -a runemacs.exe ] && alias winemacs='runemacs.exe'
+[ type -a explorer.exe ] && alias openhere='explorer.exe . '
+[ type -a SumatraPDF.exe ] && alias Sumatra='SumatraPDF.exe'
+[ type -a chrome.exe ] && alias gchrome='chrome.exe'
 
+#I like fortune
 [ type -a fortune ] && fortune
 
