@@ -1,0 +1,20 @@
+(setq user-env-table '(
+("easylist")
+("cor")
+))
+(setq user-section-table '(
+("structure")
+("emph")
+("mathop")
+("alert")
+))
+(setq user-singlecmd-table '(
+("bigcap")
+("mapsto")
+("subseteq")
+("forall")
+("in")
+("cap")
+("land")
+("setminus")
+))
