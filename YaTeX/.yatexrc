@@ -3,12 +3,25 @@
 ("cor")
 ))
 (setq user-section-table '(
+("UnaryInfC")
+("LeftLabel")
+("AxiomC")
+("roman")
 ("structure")
 ("emph")
 ("mathop")
 ("alert")
+("mathrel")
 ))
+
 (setq user-singlecmd-table '(
+("vdash")
+("sqsubseteq")
+("bigcup")
+("hfil")
+("lor")
+("neq")
+("theenumi")
 ("bigcap")
 ("mapsto")
 ("subseteq")
@@ -17,4 +30,8 @@
 ("cap")
 ("land")
 ("setminus")
+))
+
+(setq YaTeX::usepackage-alist-private '(
+("mnsymbol")
 ))
