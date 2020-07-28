@@ -1,8 +1,8 @@
-personal_ws-1.1 en 17 
+personal_ws-1.1 en 18 
 wsl
 utf
-yatex
 YaTeX
+yatex
 sequent
 coq
 Subst
@@ -10,10 +10,11 @@ pre
 aspell
 Powershell
 init
-pLaTeX
 platex
+pLaTeX
 ary
+lemmata
 LaTeX
 unary
 flyspell
-lemmata
+sequents
