@@ -13,8 +13,9 @@
 ("alert")
 ("mathrel")
 ))
-
 (setq user-singlecmd-table '(
+("cup")
+("equiv")
 ("vdash")
 ("sqsubseteq")
 ("bigcup")
