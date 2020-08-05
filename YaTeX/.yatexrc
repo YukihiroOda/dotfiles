@@ -14,6 +14,8 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("supseteq")
+("qed")
 ("cup")
 ("equiv")
 ("vdash")
