@@ -80,7 +80,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
+    (evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; magit-status key bind
@@ -97,6 +97,7 @@
 
 ;; show-paren-mode
 (show-paren-mode t)
+(global-linum-mode)
 
 ;;auto-complete
 (when (require 'auto-complete-config nil t)
@@ -170,6 +171,14 @@
 
 ;; Change window previous
 (global-set-key (kbd "C-x p") (lambda () (interactive) (other-window -1)))
+
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
 
 ;;C-x C-e eval
 
