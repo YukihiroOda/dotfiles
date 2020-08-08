@@ -19,8 +19,6 @@
 ;; Add ~\.emacs.d\elisp to load-path.
 (add-to-load-path "elisp" "elpa")
 
-;; (load-file "~/.emacs.d/elpa/proof-general-20190212.1433/generic/proof-site.el")
-
 ;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
@@ -50,9 +48,9 @@
   ;; 半角英字設定
   (set-face-attribute 'default nil :family "Roboto Mono" :height 125) 
   ;; 全角かな設定
-  ;; (set-fontset-font (frame-parameter nil 'font)
-  ;;                   'japanese-jisx0208
-  ;;                   (font-spec :family "IPAゴシック" :size 14))
+  (set-fontset-font (frame-parameter nil 'font)
+                    'japanese-jisx0208
+                    (font-spec :family "IPAゴシック" :size 14))
   ;; To use aspell
   (setq-default ispell-program-name "aspell")
   (with-eval-after-load "ispell"
@@ -192,4 +190,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
