@@ -78,8 +78,24 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
+    (volatile-highlights evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
+
+;; Screen display control
+(set-face-background 'mode-line-inactive "gray60")  
+(global-hl-line-mode t)
+(set-face-background 'hl-line "lavender")
+(show-paren-mode t)
+(setq show-paren-style 'mixed)
+(set-face-attribute 'show-paren-match nil
+                    :background "medium spring green")
+
+(transient-mark-mode t)
+(set-face-background 'region "Orange")
+
+;; volatile-highlights
+(require 'volatile-highlights)
+(volatile-highlights-mode t)
 
 ;; magit-status key bind
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -92,10 +108,6 @@
 (when (require 'git-gutter nil t)
   (global-git-gutter-mode t)
   )
-
-;; show-paren-mode
-(show-paren-mode t)
-(global-linum-mode)
 
 ;;auto-complete
 (when (require 'auto-complete-config nil t)
