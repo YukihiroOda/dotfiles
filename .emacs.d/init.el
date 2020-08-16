@@ -78,7 +78,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (volatile-highlights evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
+    (free-keys elscreen csv-mode volatile-highlights evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; Screen display control
@@ -97,11 +97,17 @@
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
 
+;;elscreen
+(setq elscreen-prefix-key (kbd "C-!"))
+(elscreen-start)
+(global-set-key (kbd "<f9>") 'elscreen-toggle)
+
 ;; magit-status key bind
 (global-set-key (kbd "C-x g") 'magit-status)
-
 ;; compile key bind
 (global-set-key (kbd "C-x c") 'compile)
+;; Change window previous
+(global-set-key (kbd "C-x p") (lambda () (interactive) (other-window -1)))
 
 
 ;; To use git-gutter
@@ -111,9 +117,11 @@
 
 ;;auto-complete
 (when (require 'auto-complete-config nil t)
-  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
   (ac-config-default)
-  (setq ac-use-menu-map t)
+  (global-auto-complete-mode t)
+  (ac-set-trigger-key "TAB")
+  (setq ac-use-menu-map t)       ;; 補完メニュー表示時にC-n/C-pで補完候補選択
+  (setq ac-use-fuzzy t)          ;; 曖昧マッチ  (setq ac-use-menu-map t)
   (setq ac-ignore-case nil))
 
 
@@ -169,18 +177,21 @@
 (mapc
  (lambda (hook)
    (add-hook hook 'flyspell-prog-mode))
- '( ;; ここに書いたモードではコメント領域のところだけflyspell-mode が有効になる
+ '(;; ここに書いたモードではコメント領域のところだけflyspell-mode が有効になる
+   c-mode-common-hook
    emacs-lisp-mode-hook
+   sh-mode-hook
    ))
 (mapc
  (lambda (hook)
    (add-hook hook (lambda () (flyspell-mode 1))))
  '( ;; ここに書いたモードではflyspell-mode が有効になる
-   yatex-mode-hook bibtex-mode-hook git-commit-setup-hook git-commit-turn-on-flyspell
+   yatex-mode-hook
+   bibtex-mode-hook
+   git-commit-setup-hook
+   git-commit-turn-on-flyspell
+   org-mode-hook
    ))
-
-;; Change window previous
-(global-set-key (kbd "C-x p") (lambda () (interactive) (other-window -1)))
 
 ;; Download Evil
 (unless (package-installed-p 'evil)
