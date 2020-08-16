@@ -3,6 +3,8 @@
 ("cor")
 ))
 (setq user-section-table '(
+("RightLabel")
+("TrinaryInfC")
 ("UnaryInfC")
 ("LeftLabel")
 ("AxiomC")
@@ -13,7 +15,9 @@
 ("alert")
 ("mathrel")
 ))
+
 (setq user-singlecmd-table '(
+("cdots")
 ("supseteq")
 ("qed")
 ("cup")
