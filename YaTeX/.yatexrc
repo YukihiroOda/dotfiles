@@ -3,6 +3,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("phantom")
 ("RightLabel")
 ("TrinaryInfC")
 ("UnaryInfC")
@@ -38,7 +39,7 @@
 ("land")
 ("setminus")
 ))
-
 (setq YaTeX::usepackage-alist-private '(
+("mleftright")
 ("mnsymbol")
 ))
