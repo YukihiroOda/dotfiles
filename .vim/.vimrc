@@ -1,3 +1,10 @@
+" To prohibit using arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+" %% as %:h
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
 " Display line numbers
 set number
 "dein Scripts-----------------------------
@@ -21,6 +28,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('vim-latex/vim-latex')
   call dein#add('justmao945/vim-clang')
+  call dein#add('tpope/vim-rails')
   " Required:
   call dein#end()
   call dein#save_state()
