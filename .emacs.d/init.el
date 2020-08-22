@@ -193,6 +193,9 @@
    org-mode-hook
    ))
 
+;; evil-mode
+(global-set-key (kbd "C-M-?") 'evil-mode)
+
 ;;C-x C-e eval
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
