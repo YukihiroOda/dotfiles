@@ -40,6 +40,8 @@
 ("setminus")
 ))
 (setq YaTeX::usepackage-alist-private '(
+("tikz")
+("hyperref")
 ("mleftright")
 ("mnsymbol")
 ))
