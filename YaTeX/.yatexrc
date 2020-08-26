@@ -3,6 +3,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("vspace")
 ("phantom")
 ("RightLabel")
 ("TrinaryInfC")
