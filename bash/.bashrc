@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Don't lock shell
+stty stop undef
+
 # PATH
 PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
 
