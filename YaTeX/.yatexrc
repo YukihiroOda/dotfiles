@@ -18,6 +18,7 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("nolinebreak")
 ("not")
 ("cdots")
 ("supseteq")
