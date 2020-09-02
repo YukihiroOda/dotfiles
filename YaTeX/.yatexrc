@@ -3,6 +3,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("overbrace")
 ("vspace")
 ("phantom")
 ("RightLabel")
@@ -17,6 +18,7 @@
 ("alert")
 ("mathrel")
 ))
+
 (setq user-singlecmd-table '(
 ("not")
 ("cdots")
