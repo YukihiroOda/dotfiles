@@ -63,6 +63,10 @@
   ;; mozc
   (require 'mozc)
   (setq default-input-method "japanese-mozc")     ; IMEをjapanes-mozcに
+  (add-hook 'input-method-activate-hook
+          (lambda() (set-cursor-color "red")))
+  (add-hook 'input-method-inactivate-hook
+          (lambda() (set-cursor-color "black")))
   )
 
 (require 'package)
