@@ -19,6 +19,11 @@
 ;; Add ~\.emacs.d\elisp to load-path.
 (add-to-load-path "elisp" "elpa")
 
+(set-language-environment "Japanese")
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(prefer-coding-system 'utf-8-unix)
+
 ;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
@@ -54,13 +59,11 @@
   ;; To use aspell
   (setq-default ispell-program-name "aspell")
   (with-eval-after-load "ispell"
-  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+    (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+  ;; mozc
+  (require 'mozc)
+  (setq default-input-method "japanese-mozc")     ; IMEをjapanes-mozcに
   )
-
-(set-language-environment "Japanese")
-(set-terminal-coding-system 'utf-8-unix)
-(set-keyboard-coding-system 'utf-8-unix)
-(prefer-coding-system 'utf-8-unix)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -78,7 +81,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (free-keys elscreen csv-mode volatile-highlights evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
+    (mozc which-key free-keys elscreen csv-mode volatile-highlights evil async caml dash git-commit popup transient with-editor magit yatex markdown-mode git-gutter auctex auto-complete proof-general haskell-mode tuareg)))
  '(tool-bar-mode nil))
 
 ;; Screen display control
