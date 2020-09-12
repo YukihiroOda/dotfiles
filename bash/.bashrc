@@ -121,6 +121,11 @@ stty stop undef
 
 # PATH
 PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
+# DEFAULT EDITOR
+type 'emacs' >& /dev/null && {
+	EDITOR=emacs; export EDITOR
+	VISUAL=emacs; export VISUAL
+}	
 
 #For performance
 type 'nautilus' >& /dev/null && alias openhere='nautilus . ' 
