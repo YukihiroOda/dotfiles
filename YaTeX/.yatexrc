@@ -1,7 +1,9 @@
 (setq user-env-table '(
+("prop")
 ("easylist")
 ("cor")
 ))
+
 (setq user-section-table '(
 ("overbrace")
 ("vspace")
@@ -18,8 +20,10 @@
 ("alert")
 ("mathrel")
 ))
-
 (setq user-singlecmd-table '(
+("supsetneq")
+("Delta")
+("emptyset")
 ("nolinebreak")
 ("not")
 ("cdots")
