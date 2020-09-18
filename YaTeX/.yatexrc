@@ -54,3 +54,9 @@
 ("mleftright")
 ("mnsymbol")
 ))
+(setq YaTeX:documentclass-options-private '(
+("a4j")
+))
+(setq YaTeX:documentclasses-private '(
+("ltjsarticle")
+))
