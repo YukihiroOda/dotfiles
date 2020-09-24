@@ -60,3 +60,6 @@
 (setq YaTeX:documentclasses-private '(
 ("ltjsarticle")
 ))
+(setq yahtml-user-env-table '(
+("dd")
+))
