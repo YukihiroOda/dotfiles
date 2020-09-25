@@ -21,6 +21,7 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("ListProperties")
 ("supsetneq")
 ("Delta")
 ("emptyset")
