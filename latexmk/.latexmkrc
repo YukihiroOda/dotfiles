@@ -6,7 +6,7 @@ $lualatex = 'lualatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
 $xelatex = 'xelatex %O -synctex=1 %S -halt-on-error -interaction=batchmode';
 
 $biber = 'biber %O --bblencoding=utf8 -u -U --output_safechars %B';
-$bibtex = 'upbibtex %O %B';
+$bibtex = 'pbibtex %O %B';
 
 $makeindex = 'upmendex %O -o %D %S';
 $max_repeat = 6;
