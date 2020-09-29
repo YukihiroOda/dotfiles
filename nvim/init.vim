@@ -29,6 +29,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('vim-latex/vim-latex')
   call dein#add('justmao945/vim-clang')
   call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-surround')
   " Required:
   call dein#end()
   call dein#save_state()
@@ -47,3 +48,6 @@ endif
 " Colorscheme 
 syntax enable
 colorscheme desert
+"matchit-------------------
+filetype plugin on
+runtime macros/matchit.vim
