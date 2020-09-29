@@ -32,7 +32,7 @@
     {
       // Put settings here that you want to apply to all profiles.
       "fontFace": "Roboto Mono",
-      "fontSize": "20"
+      "fontSize": 15
     },
     "list":
     [
