@@ -30,6 +30,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('justmao945/vim-clang')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-surround')
+  call dein#add('airblade/vim-gitgutter')
   " Required:
   call dein#end()
   call dein#save_state()
