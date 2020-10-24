@@ -4,8 +4,8 @@
 ("easylist")
 ("cor")
 ))
-
 (setq user-section-table '(
+("BinaryInfC")
 ("overbrace")
 ("vspace")
 ("phantom")
@@ -22,6 +22,9 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("star")
+("lnot")
+("fCenter")
 ("ListProperties")
 ("supsetneq")
 ("Delta")
@@ -51,11 +54,14 @@
 ))
 
 (setq YaTeX::usepackage-alist-private '(
+("mysettings")
+("pxrubrica")
 ("tikz")
 ("hyperref")
 ("mleftright")
 ("mnsymbol")
 ))
+
 (setq YaTeX:documentclass-options-private '(
 ("a4j")
 ))
