@@ -22,6 +22,8 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("models")
+("exists")
 ("star")
 ("lnot")
 ("fCenter")
