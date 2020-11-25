@@ -8,7 +8,7 @@
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
 
-  "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+  "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
 
   // You can add more global application settings here.
   // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -104,6 +104,9 @@
     { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+shift+0" },
     { "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+shift+1" },
     { "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+shift+2" },
+    // Change Tabs
+    { "command": "nextTab", "keys": "ctrl+right" },
+    { "command": "prevTab", "keys": "ctrl+left" },
     // Close Tab
     { "command": "closeTab", "keys": "ctrl+alt+shift+w" },
     
