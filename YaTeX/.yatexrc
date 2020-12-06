@@ -24,6 +24,7 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("colon")
 ("models")
 ("exists")
 ("star")
