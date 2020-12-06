@@ -1,4 +1,7 @@
 [alias]
 	s = status
+	a = "add"
+	c = "commit"
 	lol = "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 	pall = "pull --all"
+	po = "push orign"
