@@ -4,4 +4,3 @@
 	c = "commit"
 	lol = "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 	pall = "pull --all"
-	po = "push orign"
