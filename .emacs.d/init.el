@@ -54,11 +54,11 @@
 ;; Settings to use only in Linux system.
 (when (eq system-type 'gnu/linux)
   ;; 半角英字設定
-  (set-face-attribute 'default nil :family "Roboto Mono" :height 150)
+  (set-face-attribute 'default nil :family "Roboto Mono" :height 120)
   ;; 全角かな設定
   (set-fontset-font (frame-parameter nil 'font)
                     'japanese-jisx0208
-                    (font-spec :family "IPAゴシック" :size 20))
+                    (font-spec :family "IPAゴシック" :size 17))
   ;; To use aspell
   (setq-default ispell-program-name "aspell")
   (with-eval-after-load "ispell"
