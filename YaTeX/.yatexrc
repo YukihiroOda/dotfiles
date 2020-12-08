@@ -1,9 +1,11 @@
 (setq user-env-table '(
+("proof")
 ("prooftree")
 ("prop")
 ("easylist")
 ("cor")
 ))
+
 (setq user-section-table '(
 ("BinaryInfC")
 ("overbrace")
@@ -22,6 +24,7 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("colon")
 ("models")
 ("exists")
 ("star")
@@ -63,13 +66,15 @@
 ("mleftright")
 ("mnsymbol")
 ))
-
 (setq YaTeX:documentclass-options-private '(
+("varwidth")
 ("a4j")
 ))
 (setq YaTeX:documentclasses-private '(
+("standalone")
 ("ltjsarticle")
 ))
+
 (setq yahtml-user-env-table '(
 ("dd")
 ))

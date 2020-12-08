@@ -120,7 +120,7 @@ fi
 stty stop undef
 
 # PATH
-PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi; export PATH
+PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi:$HOME/.local/bin; export PATH
 # DEFAULT EDITOR
 type 'emacs' >& /dev/null && {
 	EDITOR=emacs; export EDITOR
