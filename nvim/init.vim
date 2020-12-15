@@ -48,7 +48,7 @@ endif
 "End dein Scripts-------------------------
 " Colorscheme 
 syntax enable
-colorscheme desert
+colorscheme darkblue
 "matchit-------------------
 filetype plugin on
 runtime macros/matchit.vim
