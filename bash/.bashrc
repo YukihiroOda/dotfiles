@@ -116,24 +116,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
+## My settings
 # Don't lock shell
 stty stop undef
 
 # PATH
 PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi:$HOME/bin/docx2tex:$HOME/.local/bin; export PATH
+
 # DEFAULT EDITOR
 type 'emacs' >& /dev/null && {
 	EDITOR=emacs; export EDITOR
 	VISUAL=emacs; export VISUAL
-}	
+}
 
 #For performance
-type 'nautilus' >& /dev/null && alias openhere='nautilus . ' 
+type 'nautilus' >& /dev/null && alias openhere='nautilus . '
+alias cdma='cd ~/work/master_thesis'
+alias emacssec='emacs ./sections/*.tex' 
 
 #For WSL
 type 'runemacs.exe' >& /dev/null && alias winemacs='runemacs.exe'
 type 'explorer.exe' >& /dev/null  && alias openhere='explorer.exe . '
-type 'SumatraPDF.exe' >& /dev/null && alias Sumatra='SumatraPDF.exe'
 type 'chrome.exe' >& /dev/null && alias gchrome='chrome.exe'
 
 #I like fortune
