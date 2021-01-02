@@ -129,11 +129,6 @@ type 'emacs' >& /dev/null && {
 	VISUAL=emacs; export VISUAL
 }
 
-#For performance
-type 'nautilus' >& /dev/null && alias openhere='nautilus . '
-alias cdma='cd ~/work/master_thesis'
-alias emacssec='emacs ./sections/*.tex' 
-
 #For WSL
 type 'runemacs.exe' >& /dev/null && alias winemacs='runemacs.exe'
 type 'explorer.exe' >& /dev/null  && alias openhere='explorer.exe . '
