@@ -129,10 +129,6 @@ type 'emacs' >& /dev/null && {
 	VISUAL=emacs; export VISUAL
 }
 
-#For WSL
-type 'runemacs.exe' >& /dev/null && alias winemacs='runemacs.exe'
-type 'explorer.exe' >& /dev/null  && alias openhere='explorer.exe . '
-type 'chrome.exe' >& /dev/null && alias gchrome='chrome.exe'
 
 #I like fortune
 type fortune >& /dev/null && fortune
