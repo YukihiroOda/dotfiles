@@ -24,13 +24,14 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
+  call dein#add('airblade/vim-gitgutter')
+  call dein#add('justmao945/vim-clang')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('vim-latex/vim-latex')
-  call dein#add('justmao945/vim-clang')
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-surround')
-  call dein#add('airblade/vim-gitgutter')
+  call dein#add('tpope/vim-unimpaired')
+  call dein#add('vim-latex/vim-latex')
   " Required:
   call dein#end()
   call dein#save_state()
