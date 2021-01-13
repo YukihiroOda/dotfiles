@@ -1,0 +1,24 @@
+#!/bin/sh
+
+ln -sf ./bash/.bash* ~/
+ln -sf ./aspell/.aspell.* ~/
+ln -sf ./.emacs.d ~/
+ln -sf ./YaTeX/.yatexrc ~/
+ln -sf ./latexmk/.latexmkrc ~/
+
+if [ -d ~/bin]; [ $? -ne 0 ]
+then
+    mkdir ~/bin
+fi
+ln -sf ./bash/addpath ~/
+
+if [ -d ~/.config]; [ $? -ne 0 ]
+then
+    mkdir ~/.config
+    if [ -d ~/.config/nvim]; [ $? -ne 0 ]
+    then
+	mkdir ~/.config/nvim
+    fi
+fi
+
+lm -sf ./nvim/init.vim ~/.config/nvim/
