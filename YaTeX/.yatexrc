@@ -5,8 +5,8 @@
 ("easylist")
 ("cor")
 ))
-
 (setq user-section-table '(
+("intertext")
 ("BinaryInfC")
 ("overbrace")
 ("vspace")
@@ -23,6 +23,7 @@
 ("alert")
 ("mathrel")
 ))
+
 (setq user-singlecmd-table '(
 ("subset")
 ("colon")
