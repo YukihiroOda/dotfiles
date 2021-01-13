@@ -9,7 +9,6 @@ addunderdirtopath()
 	    PATH="$PATH":"$arg"; export PATH
 	    for dirunderarg in "$arg/*"
 	    do
-		echo $dirunderarg
 		if [ -d  "$dirunderarg" ]; then
 		    PATH="$PATH":"$dirunderarg"; export PATH
 		fi
