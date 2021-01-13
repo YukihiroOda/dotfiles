@@ -1,0 +1,20 @@
+#!/bin/sh
+
+addunderdirtopath()
+
+{
+    for arg in "$@"
+    do
+	if [ -d  "$arg" ]; then
+	    PATH="$PATH":"$arg"; export PATH
+	    for dirunderarg in "$arg/*"
+	    do
+		echo $dirunderarg
+		if [ -d  "$dirunderarg" ]; then
+		    PATH="$PATH":"$dirunderarg"; export PATH
+		fi
+	    done
+	fi
+    done
+	       
+}

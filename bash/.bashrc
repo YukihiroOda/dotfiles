@@ -120,15 +120,18 @@ fi
 # Don't lock shell
 stty stop undef
 
+if [ -f ~/bin/addpath ]; then
+    . ~/bin/addpath
+fi
+
 # PATH
-PATH="$PATH":$HOME/bin:$HOME/bin/bash-scripts:$HOME/bin/SATySfi:$HOME/bin/docx2tex:$HOME/.local/bin; export PATH
+addunderdirtopath "$HOME/bin" "$HOME/.local/bin"
 
 # DEFAULT EDITOR
 type 'emacs' >& /dev/null && {
 	EDITOR=emacs; export EDITOR
 	VISUAL=emacs; export VISUAL
 }
-
 
 #I like fortune
 type fortune >& /dev/null && fortune
