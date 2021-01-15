@@ -73,6 +73,7 @@
 ("a4j")
 ))
 (setq YaTeX:documentclasses-private '(
+("jlreq")
 ("standalone")
 ("ltjsarticle")
 ))
