@@ -1,16 +1,16 @@
 #!/bin/sh
 
-ln -sf ./bash/.bash* ~/
-ln -sf ./aspell/.aspell.* ~/
-ln -sf ./.emacs.d ~/
-ln -sf ./YaTeX/.yatexrc ~/
-ln -sf ./latexmk/.latexmkrc ~/
+ln -sf "`pwd`/bash/.bash*" "$HOME/"
+ln -sf "`pwd`/aspell/.aspell.*" "$HOME/"
+ln -sf "`pwd`/.emacs.d" "$HOME/"
+ln -sf "`pwd`/YaTeX/.yatexrc" "$HOME/"
+ln -sf "`pwd`/latexmk/.latexmkrc" "$HOME/"
 
 if [ -d ~/bin]; [ $? -ne 0 ]
 then
     mkdir ~/bin
 fi
-ln -sf ./bash/addpath ~/
+ln -sf "`pwd`/bash/addpath" "$HOME/"
 
 if [ -d ~/.config]; [ $? -ne 0 ]
 then
@@ -21,4 +21,4 @@ then
     fi
 fi
 
-lm -sf ./nvim/init.vim ~/.config/nvim/
+ln -sf "`pwd`/nvim/init.vim" "$HOME/.config/nvim/"
