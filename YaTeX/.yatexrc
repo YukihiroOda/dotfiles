@@ -6,6 +6,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("tikzmark")
 ("intertext")
 ("BinaryInfC")
 ("overbrace")
@@ -59,8 +60,8 @@
 ("land")
 ("setminus")
 ))
-
 (setq YaTeX::usepackage-alist-private '(
+("docmute")
 ("mysettings")
 ("pxrubrica")
 ("tikz")
@@ -68,10 +69,14 @@
 ("mleftright")
 ("mnsymbol")
 ))
+
 (setq YaTeX:documentclass-options-private '(
+("paper=a4")
+("lualatex")
 ("varwidth")
 ("a4j")
 ))
+
 (setq YaTeX:documentclasses-private '(
 ("jlreq")
 ("standalone")
