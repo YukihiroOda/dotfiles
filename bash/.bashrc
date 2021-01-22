@@ -125,7 +125,7 @@ if [ -f ~/bin/addpath ]; then
 fi
 
 # PATH
-addunderdirtopath "$HOME/bin" "$HOME/.local/bin"
+addunderdirtopath "$HOME/bin" "$HOME/.local/bin" "$HOME/.opam/4.10.0/bin" "$HOME/.opam/4.10.0/sbin"
 
 # DEFAULT EDITOR
 type 'emacs' >& /dev/null && {
