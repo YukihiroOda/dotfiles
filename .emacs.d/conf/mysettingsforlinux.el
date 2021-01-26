@@ -1,11 +1,11 @@
 ;; Settings to use only in Linux system.
 (when (eq system-type 'gnu/linux)
   ;; 半角英字設定
-  (set-face-attribute 'default nil :family "源ノ角ゴシック" :height 120)
+  (set-face-attribute 'default nil :family "SourceHanSansHW" :height 120)
   ;; 全角日本語設定
   (set-fontset-font (frame-parameter nil 'font)
-                    'japanese-jisx0208
-                    (font-spec :family "源ノ角ゴシック" :size 17))
+                    'unicode
+                    (font-spec :family "SourceHanSansHW" :size 17))
   ;; To use aspell
   (setq-default ispell-program-name "aspell")
   (with-eval-after-load "ispell"
