@@ -6,6 +6,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("theoremstyle")
 ("tikzmark")
 ("intertext")
 ("BinaryInfC")
@@ -26,6 +27,8 @@
 ))
 
 (setq user-singlecmd-table '(
+("sim")
+("dotfill")
 ("subset")
 ("colon")
 ("models")
@@ -60,7 +63,9 @@
 ("land")
 ("setminus")
 ))
+
 (setq YaTeX::usepackage-alist-private '(
+("amsmath,amssymb")
 ("docmute")
 ("mysettings")
 ("pxrubrica")
@@ -76,8 +81,8 @@
 ("varwidth")
 ("a4j")
 ))
-
 (setq YaTeX:documentclasses-private '(
+("scrartcl")
 ("jlreq")
 ("standalone")
 ("ltjsarticle")
