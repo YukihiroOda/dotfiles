@@ -20,7 +20,7 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; Add ~\.emacs.d\elisp to load-path.
-(add-to-load-path "elisp" "elpa" "conf")
+(add-to-load-path "elisp" "elpa" "conf" "secret")
 
 ;;言語設定
 (set-language-environment "Japanese")
@@ -75,6 +75,9 @@
 
 ;; Settings for evil
 (load "mysettingsforevil")
+
+;; Settings for Media Wiki
+(load "mysettingsforMediaWiki")
 
 ;;C-x C-e eval
 
