@@ -1,24 +1,42 @@
 #!/bin/sh
 
-ln -sf "`pwd`/bash/.bash"* "$HOME/"
+#aspell settings
 ln -sf "`pwd`/aspell/.aspell."* "$HOME/"
-ln -sf "`pwd`/.emacs.d" "$HOME/"
+
+#TeX settings
 ln -sf "`pwd`/YaTeX/.yatexrc" "$HOME/"
 ln -sf "`pwd`/latexmk/.latexmkrc" "$HOME/"
-
-if [ -d ~/bin]; [ $? -ne 0 ]
+if ! [ -e "$HOME/texmf" ]
 then
-    mkdir ~/bin
+	mkdir "$HOME/texmf" 
+fi
+
+#bash settings
+ln -sf "`pwd`/bash/.bash"* "$HOME/"
+if ! [ -e "$HOME/bin" ] 
+then
+    mkdir "$HOME/bin"
 fi
 ln -sf "`pwd`/bash/addpath" "$HOME/bin/"
 
-if [ -d ~/.config]; [ $? -ne 0 ]
+#emacs settings
+ln -sf "`pwd`/.emacs.d" "$HOME/"
+
+#nvim settings
+if ! [ -e "$HOME/.config" ] 
 then
-    mkdir ~/.config
-    if [ -d ~/.config/nvim]; [ $? -ne 0 ]
+    mkdir "$HOME/.config"
+    if ! [ -e "$HOME/.config/nvim" ] 
     then
-	mkdir ~/.config/nvim
+	mkdir "$HOME/.config/nvim"
     fi
 fi
 
 ln -sf "`pwd`/nvim/init.vim" "$HOME/.config/nvim/"
+
+if ! [ -e "$HOME/.cache/dein" ]
+then
+	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/deininstaller.sh"
+	# For example, we just use `~/.cache/dein` as installation directory
+	sh ./deininstaller.sh "$HOME/.cache/dein"
+fi
