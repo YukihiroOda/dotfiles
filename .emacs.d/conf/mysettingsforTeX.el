@@ -1,6 +1,6 @@
 ;;; YaTeX-mode ------------------------------
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
-(setq tex-command "platex")
+(setq tex-command "lualatex")
 (setq makeindex-command "mendex")
 (setq auto-mode-alist (cons (cons ".tex$" 'yatex-mode) auto-mode-alist))
 (setq auto-mode-alist (cons (cons ".ltx$" 'yatex-mode) auto-mode-alist))
@@ -19,8 +19,8 @@
 ;;; AUCTeX-mode ------------------------------
 (require 'tex-site)
 (setq TeX-default-mode 'japanese-latex-mode)
-(setq japanese-TeX-command-default "pTeX")
-(setq japanese-LaTeX-command-default "pLaTeX")
+(setq japanese-TeX-command-default "LuaTeX")
+(setq japanese-LaTeX-command-default "LuaLaTeX")
 (setq japanese-LaTeX-default-style "jsarticle")
 (setq-default TeX-master nil)
 (setq TeX-parse-self t)
