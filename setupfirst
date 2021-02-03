@@ -38,5 +38,5 @@ if ! [ -e "$HOME/.cache/dein" ]
 then
 	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/deininstaller.sh"
 	# For example, we just use `~/.cache/dein` as installation directory
-	sh ./deininstaller.sh "$HOME/.cache/dein"
+	sh $HOME/deininstaller.sh "$HOME/.cache/dein"
 fi
