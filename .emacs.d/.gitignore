@@ -6,5 +6,6 @@ server
 ac-comphist.dat
 /tutorial/
 /url/
-satysfi.el
-/secret/
+*.elc
+/var/
+custom.el
