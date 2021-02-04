@@ -15,7 +15,7 @@ fi
 ln -sf "`pwd`/bash/.bash"* "$HOME/"
 if ! [ -e "$HOME/bin" ] 
 then
-    mkdir "$HOME/bin"
+	mkdir "$HOME/bin"
 fi
 ln -sf "`pwd`/bash/addpath" "$HOME/bin/"
 
@@ -25,11 +25,12 @@ ln -sf "`pwd`/.emacs.d" "$HOME/"
 #nvim settings
 if ! [ -e "$HOME/.config" ] 
 then
-    mkdir "$HOME/.config"
-    if ! [ -e "$HOME/.config/nvim" ] 
-    then
+	mkdir "$HOME/.config"
+fi
+
+if ! [ -e "$HOME/.config/nvim" ] 
+then
 	mkdir "$HOME/.config/nvim"
-    fi
 fi
 
 ln -sf "`pwd`/nvim/init.vim" "$HOME/.config/nvim/"
