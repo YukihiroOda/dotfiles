@@ -480,7 +480,10 @@
 ;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
-  (autoload 'powershell "powershell.el" "Run powershell as a shell within emacs." t)
+  (leaf leaf-convert
+    :ensure powershell
+    :commands powershell
+    )
   ;; To use coq
   (setq coq-prog-name "C:/Program Files (x86)/Coq/bin/coqtop.exe")
   ;; To use utf-8 in Windows
