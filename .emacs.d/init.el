@@ -486,6 +486,9 @@
  (kbd "C-c c")
  'compile
  )
+(global-set-key
+ (kbd "C-z")
+ 'nil)
 
 (leaf settings-for-windows)
 ;; Settings to use only in Windows system.
