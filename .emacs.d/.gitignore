@@ -11,3 +11,5 @@ ac-comphist.dat
 custom.el
 /el-get/
 mediawikisettings.el
+/secret/
+/recentf
