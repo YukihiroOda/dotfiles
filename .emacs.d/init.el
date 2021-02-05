@@ -442,6 +442,8 @@
 	)
   )
 
+(load "~/.emacs.d/secret/mediawikisettings.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (put 'downcase-region 'disabled nil)
