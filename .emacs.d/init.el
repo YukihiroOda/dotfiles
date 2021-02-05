@@ -479,8 +479,8 @@
 ;; Settings to use only in Windows system.
 (when (or (eq system-type 'windows-nt) (eq system-type 'cygwin))
   ;; To use Powershell.
-  (leaf leaf-convert
-    :ensure powershell
+  (leaf powershell
+    :ensure t
     :commands powershell
     )
   ;; To use coq
