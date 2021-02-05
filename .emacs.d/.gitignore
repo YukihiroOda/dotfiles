@@ -9,3 +9,4 @@ ac-comphist.dat
 *.elc
 /var/
 custom.el
+/el-get/
