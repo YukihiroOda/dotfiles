@@ -216,7 +216,20 @@
 ;; Which-key
 (leaf which-key
   :ensure which-key
+  :commands which-key-mode
+  :global-minor-mode which-key-mode
   )
+
+;; helm
+(leaf helm
+  :ensure t
+ )
+(leaf helm-descbinds
+  :ensure t
+  :commands helm-descbinds-mode
+  :global-minor-mode helm-descbinds-mode
+ )
+
 ;; Free-key
 (leaf free-keys
   :ensure free-keys
@@ -426,10 +439,7 @@
   :mode "\\.mediawiki$"
   :bind (
 	 (mediawiki-mode-map
-	  ("C-x C-s")
-	  )
-	 (mediawiki-mode-map
-	  ("C-x C-s" . save-buffer)
+	  ("C-x <f12>" . save-buffer)
 	  )
 	 )
   :setq (
