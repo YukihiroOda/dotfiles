@@ -132,6 +132,11 @@ type 'emacs' >& /dev/null && {
 	VISUAL=emacs; export VISUAL
 }
 
+# Local Settings
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+
 #I like fortune
 type fortune >& /dev/null && fortune
 
