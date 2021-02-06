@@ -399,6 +399,13 @@
 		   )
    )
   )
+(leaf flyspell-correct-ivy
+  :ensure t
+  :bind (
+	 ("<f6>" . flyspell-correct-at-point)
+	 )
+  )
+
 
 ;; flycheck 
 (leaf flycheck
