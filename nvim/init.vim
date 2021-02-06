@@ -53,3 +53,5 @@ colorscheme darkblue
 "matchit-------------------
 filetype plugin on
 runtime macros/matchit.vim
+"nrformats
+set nrformats=
