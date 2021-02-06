@@ -249,10 +249,14 @@
 ;; magit-status key bind
 (leaf magit
   :ensure magit
+  :setq (
+	 (magit-completing-read-function quote ivy-completing-read)
+	 )
   :bind (
 	 ("C-x g" . magit-status)
 	 )
   )
+
 ;; To use git-gutter
 (leaf git-gutter
   ;; :when (require 'git-gutter nil t)
@@ -260,7 +264,7 @@
   :global-minor-mode  global-git-gutter-mode
   )
 
-;; company
+;; company -------------------------------
 (leaf company
   :doc "Modular text completion framework"
   :req "emacs-24.3"
