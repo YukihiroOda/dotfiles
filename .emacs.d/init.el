@@ -220,16 +220,6 @@
   :global-minor-mode which-key-mode
   )
 
-;; helm
-(leaf helm
-  :ensure t
- )
-(leaf helm-descbinds
-  :ensure t
-  :commands helm-descbinds-mode
-  :global-minor-mode helm-descbinds-mode
- )
-
 ;; Free-key
 (leaf free-keys
   :ensure free-keys
