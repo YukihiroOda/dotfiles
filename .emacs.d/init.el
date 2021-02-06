@@ -441,6 +441,8 @@
   :bind (
 	 (mediawiki-mode-map
 	  ("C-x <f12>" . save-buffer)
+	  ("C-z" . mediawiki-insert-itemize )
+	  ("C-\\" . toggle-input-method)
 	  )
 	 )
   :setq (
@@ -578,6 +580,9 @@
 
 ;; Default screen size
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; I HATE BEEP
+(setq visible-bell t)
 
 (provide 'init)
 ;;; init.el ends here
