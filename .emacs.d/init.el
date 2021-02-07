@@ -440,7 +440,8 @@
   :mode "\\.mediawiki$"
   :bind (
 	 (mediawiki-mode-map
-	  ("C-x <f12>" . save-buffer)
+	  ("C-x C-s" . save-buffer)
+	  ("C-x <f12>" . mediawiki-save)
 	  ("C-z" . mediawiki-insert-itemize )
 	  ("C-\\" . toggle-input-method)
 	  )
