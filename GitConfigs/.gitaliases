@@ -5,6 +5,7 @@
 	lol = "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 	pall = "pull --all"
 	pom = "push origin master"
+	po = "push origin"
 	gss = "log --graph --date=short --decorate=short --all"
         # Untracked filesを表示しない
 	suno  = "status -uno"
