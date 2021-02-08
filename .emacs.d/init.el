@@ -514,12 +514,8 @@
   (setq-default ispell-program-name "~/.emacs.d/aspell.cmd")
   (with-eval-after-load "ispell"
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
-  ;; 半角英字設定
-  (set-face-attribute 'default nil :family "Roboto Mono" :height 125)
-  ;; 全角かな設定
-  (set-fontset-font (frame-parameter nil 'font)
-                    'japanese-jisx0208
-                    (font-spec :family "Yu Gothic" :size 14))
+  ;; フォント
+  (set-face-attribute 'default nil :family "Yu Gothic" :height 125)
   )
 
 (leaf settings-for-linux)
@@ -566,7 +562,7 @@
   :global-minor-mode global-hl-line-mode
   )
 
-(leaf leaf-convert
+(leaf show-paren-mode
   :setq (
 	 (show-paren-style quote mixed)
 	 )
@@ -574,7 +570,7 @@
   :global-minor-mode   show-paren-mode
   )
 
-(leaf leaf-convert
+(leaf transient-mark-mode
   :config  (set-face-background 'region "Orange")
   :global-minor-mode transient-mark-mode
   )
