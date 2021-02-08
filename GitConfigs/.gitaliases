@@ -4,3 +4,9 @@
 	c = "commit"
 	lol = "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 	pall = "pull --all"
+	pom = "push origin master"
+	gss = "log --graph --date=short --decorate=short --all"
+        # Untracked filesを表示しない
+	suno  = "status -uno"
+        # 単語レベルでの差分
+	worddiff = "diff --word-diff"
