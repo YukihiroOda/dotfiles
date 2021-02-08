@@ -1,4 +1,9 @@
 [core]
 	editor = nvim
-	filemode = false
+	filemode = true
 	autocrlf = false
+	ignorecase = false
+	precomposeunicode = true
+	quotepath = false
+[pull]
+	ff = only
