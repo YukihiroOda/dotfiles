@@ -437,7 +437,7 @@
 ;; Settings for Media Wiki
 (leaf mediawiki
   :ensure t
-  :mode "\\.mediawiki$"
+  :mode "\\.mediawiki$" "\\.mw$"
   :bind (
 	 (mediawiki-mode-map
 	  ("C-x C-s" . save-buffer)
