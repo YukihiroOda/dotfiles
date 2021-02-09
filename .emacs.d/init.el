@@ -432,6 +432,20 @@
   :bind (
 	 ("C-M-?" . evil-mode)
 	 )
+  :config
+  (leaf evil-surround :ensure t )
+  (setq evil-mode-hook (lambda nil
+			 (global-evil-surround-mode)
+			 )
+	)
+  )
+
+(leaf surround
+  ;; :preface (el-get-bundle ganmacs/emacs-surround)
+  :el-get ganmacs/emacs-surround
+  :bind (
+	 ("M-S" . emacs-surround)
+	 )
   )
 
 ;; Settings for Media Wiki
