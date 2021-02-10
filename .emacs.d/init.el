@@ -331,16 +331,13 @@
 	      (make-local-variable 'outline-regexp)
 	      )
 	    )
-  ;;; YaHTML-mode
-  (leaf YaHTML
-    :commands yahtml-mode
-    :config
-    (setq auto-mode-alist (cons
-			   (cons ".html$" 'yahtml-mode)
-			   auto-mode-alist)
-	  )
-    )
   )
+(leaf yahtml
+  ;;; YaHTML-mode
+  :commands yahtml-mode
+  :mode "\\.html$"
+ )
+
 
 ;;; BibTeX-mode ---------------------------------------
 (leaf BibTeX
