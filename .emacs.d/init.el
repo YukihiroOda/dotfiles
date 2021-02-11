@@ -498,7 +498,7 @@
    )
  )
 (global-set-key
- (kbd "C-c c")
+ (kbd "C-x c")
  'compile
  )
 (global-set-key
