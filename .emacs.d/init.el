@@ -441,7 +441,7 @@
   ;; :preface (el-get-bundle ganmacs/emacs-surround)
   :el-get ganmacs/emacs-surround
   :bind (
-	 ("M-S" . emacs-surround)
+	 ("<f12>" . emacs-surround)
 	 )
   )
 
