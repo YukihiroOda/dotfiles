@@ -447,6 +447,7 @@
   :bind (
 	 ("<f12>" . emacs-surround)
 	 )
+  :config (push ("$" . ("$" . "$")) emacs-surround-alist)
   )
 
 ;; Settings for Media Wiki
