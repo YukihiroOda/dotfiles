@@ -87,7 +87,7 @@
 ("standalone")
 ("ltjsarticle")
 ))
-
 (setq yahtml-user-env-table '(
+("math")
 ("dd")
 ))
