@@ -122,13 +122,6 @@
 		 )
   )
 
-;; delsel
-(leaf delsel
-  :doc "delete selection if you insert"
-  :tag "builtin"
-  :global-minor-mode delete-selection-mode
-  )
-
 ;; kill-ring
 (leaf simple
   :doc "basic editing commands for Emacs"
