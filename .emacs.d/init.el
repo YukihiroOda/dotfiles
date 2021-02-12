@@ -318,16 +318,15 @@
 	 (YaTeX-kanji-code . 4)
 	 )
   :mode "\\.tex$" "\\.ltx$" "\\.sty$"
-  :config
-  ;; yatex-mode-hook 
-  (add-hook 'yatex-mode-hook
-	    (lambda nil
-	      (outline-minor-mode t)
-	      (setq LaTeX-outline-regexp (concat "[ t]*"
-						 (regexp-quote "")
-						 "(appendix|documentstyle|part|chapter|" "section|subsection|subsubsection|" "paragraph|subparagraph)" "*?[ t]*[[{]")
-		    )
-	      (make-local-variable 'outline-regexp)
+  :mode-hook
+  ;; yatex-mode-hook
+  (yatex-mode-hook . (
+		      (outline-minor-mode t)
+		      (setq LaTeX-outline-regexp (concat "[ t]*"
+							 (regexp-quote "")
+							 "(appendix|documentstyle|part|chapter|" "section|subsection|subsubsection|" "paragraph|subparagraph)" "*?[ t]*[[{]")
+			    )
+		      (make-local-variable 'outline-regexp)
 	      )
 	    )
   )
@@ -431,12 +430,10 @@
   :config
   (leaf evil-surround
     :ensure t
+    :hook (evil-mode-hook)
     :config
     (global-evil-surround-mode)
-    (setq evil-mode-hook (lambda ()
-			   (push '(?$ . ("$" . "$")) evil-surround-pairs-alist)
-			   )
-	  )
+    (push '(?$ . ("$" . "$")) evil-surround-pairs-alist)
     )
   )
 
@@ -447,7 +444,8 @@
   :bind (
 	 ("<f12>" . emacs-surround)
 	 )
-  :config (push ("$" . ("$" . "$")) emacs-surround-alist)
+  :config
+  (push ("$" . ("$" . "$")) emacs-surround-alist)
   )
 
 ;; Settings for Media Wiki
