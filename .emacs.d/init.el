@@ -316,7 +316,6 @@
   :setq (
 	 (tex-command . "lualatex")
 	 (YaTeX-kanji-code . 4)
-	 (YaTeX-need-nonstop . t)
 	 )
   :mode "\\.tex$" "\\.ltx$" "\\.sty$"
   :config
