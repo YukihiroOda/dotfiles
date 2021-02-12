@@ -429,13 +429,18 @@
 	 ("C-M-?" . evil-mode)
 	 )
   :config
-  (leaf evil-surround :ensure t )
-  (setq evil-mode-hook (lambda nil
-			 (global-evil-surround-mode)
-			 )
-	)
+  (leaf evil-surround
+    :ensure t
+    :config
+    (global-evil-surround-mode)
+    (setq evil-mode-hook (lambda ()
+			   (push '(?$ . ("$" . "$")) evil-surround-pairs-alist)
+			   )
+	  )
+    )
   )
 
+;; surround --------------------------
 (leaf surround
   ;; :preface (el-get-bundle ganmacs/emacs-surround)
   :el-get ganmacs/emacs-surround
