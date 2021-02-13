@@ -399,7 +399,7 @@
   )
 
 
-;; flycheck 
+;; flycheck---------------------------------------
 (leaf flycheck
   :doc "On-the-fly syntax checking"
   :req "dash-2.12.1" "pkg-info-0.4" "let-alist-1.0.4" "seq-1.11" "emacs-24.3"
@@ -412,6 +412,8 @@
          ("M-p" . flycheck-previous-error)
 	 )
   :global-minor-mode global-flycheck-mode
+  :config
+  (leaf flycheck-grammarly :ensure t)
   )
 
 ;; evil-mode ----------------------------
