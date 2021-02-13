@@ -25,7 +25,9 @@ if dein#load_state('$HOME/.cache/dein')
 
   " Add or remove your plugins here like this:
   call dein#add('airblade/vim-gitgutter')
+  call dein#add('gianarb/coc-grammarly')
   call dein#add('justmao945/vim-clang')
+  call dein#add('rhysd/vim-grammarous')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('tpope/vim-rails')
