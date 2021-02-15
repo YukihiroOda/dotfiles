@@ -238,8 +238,7 @@
 (elscreen-start)
 
 
-;; Settings for git -------------------
-;; magit-status key bind
+;; Settings for magit -------------------
 (leaf magit
   :ensure magit
   :setq (
@@ -250,7 +249,7 @@
 	 )
   )
 
-;; To use git-gutter
+;; To use git-gutter -----------------
 (leaf git-gutter
   ;; :when (require 'git-gutter nil t)
   :ensure git-gutter
@@ -301,6 +300,39 @@
   :config
   (add-to-list 'company-backends 'company-c-headers)
   )
+
+;; git-complete -------------------
+(leaf git-complete
+  :el-get zk-phi/git-complete
+  :bind (
+	 ("C-c C-c" . nil)
+	 ("C-z" . git-complete)
+	 )
+  :setq (
+	 (git-complete-enable-autopair . t)
+	 )
+  )
+
+;; dumb-jump ------------------------
+(leaf dumb-jump
+  :ensure t
+  :setq (
+	 (dumb-jump-selector . 'ivy)
+	 )
+  :global-minor-mode dumb-jump-mode)
+
+;; smart-jump ---------------------
+(leaf smart-jump
+ :ensure t
+ :config
+ (smart-jump-setup-default-registers)
+ :bind (
+	("s-g" . smart-jump-go)
+	("s-b" . smart-jump-back)
+	("s-?" . smart-jump-references)
+	)
+ )
+
 
 ;; YaTeX-mode ---------------------
 (leaf yatex
@@ -356,7 +388,7 @@
 	 )
   )
 
-;; Settings for Coq
+;; Settings for Coq ----------
 (leaf proof-general
   :ensure t
   :commands coq-mode
