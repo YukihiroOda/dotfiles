@@ -41,3 +41,6 @@ then
 	# For example, we just use `~/.cache/dein` as installation directory
 	sh $HOME/deininstaller.sh "$HOME/.cache/dein"
 fi
+
+#tmux
+ln -sf "`pwd`/tmux/.tmux.conf" "$HOME/"
