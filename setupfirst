@@ -20,6 +20,10 @@ fi
 ln -sf "`pwd`/bash/addpath" "$HOME/bin/"
 
 #emacs settings
+if ![ -d "`pwd`/.emacs.d" ]
+then
+	git clone git@github.com:YukihiroMasuoka/.emacs.d.git
+fi
 ln -sf "`pwd`/.emacs.d" "$HOME/"
 
 #nvim settings
