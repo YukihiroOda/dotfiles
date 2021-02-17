@@ -378,7 +378,6 @@
 
 ;; Settings for SATySFi ----------------
 (leaf satysfi
-  :preface (el-get-bundle gfngfn/satysfi.el)
   :el-get gfngfn/satysfi.el
   :commands satysfi-mode satysfi-command
   :mode "\\.saty$" "\\.satyh$"
