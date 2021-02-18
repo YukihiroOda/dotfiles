@@ -1,3 +1,0 @@
-#!/bin/sh
-
-rclone sync ~/.emacs.d/secret s_gdrive:rclone/settings/secret
