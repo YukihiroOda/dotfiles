@@ -20,7 +20,7 @@ fi
 ln -sf "`pwd`/bash/addpath" "$HOME/bin/"
 
 #emacs settings
-if ![ -d "`pwd`/.emacs.d" ]
+if ! [ -d "`pwd`/.emacs.d" ]
 then
 	git clone git@github.com:YukihiroMasuoka/.emacs.d.git
 fi
@@ -34,15 +34,12 @@ fi
 
 if ! [ -e "$HOME/.config/nvim" ] 
 then
-	mkdir "$HOME/.config/nvim"
+	ln -sf "`pwd`/nvim" "$HOME/.config/"
 fi
-
-ln -sf "`pwd`/nvim/init.vim" "$HOME/.config/nvim/"
 
 if ! [ -e "$HOME/.cache/dein" ]
 then
 	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/deininstaller.sh"
-	# For example, we just use `~/.cache/dein` as installation directory
 	sh $HOME/deininstaller.sh "$HOME/.cache/dein"
 fi
 
