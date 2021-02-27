@@ -6,8 +6,8 @@
 	pall = "pull --all"
 	pu = "pull upstream"
 	po = "pull origin"
-	gss = "log --graph --date=short --decorate=short --all"
+	lgss = "log --graph --date=short --decorate=short --all"
         # Untracked filesを表示しない
-	suno  = "status -uno"
+	so  = "status -uno"
         # 単語レベルでの差分
-	worddiff = "diff --word-diff"
+	wdiff = "diff --word-diff"
