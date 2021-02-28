@@ -4,6 +4,7 @@
 	c = "commit"
 	lol = "log --graph --decorate --pretty=oneline --all --abbrev-commit"
 	pall = "pull --all"
+	fall = "fetch --all"
 	pu = "pull upstream"
 	po = "pull origin"
 	lgss = "log --graph --date=short --decorate=short --all"
