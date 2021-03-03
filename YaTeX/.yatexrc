@@ -63,8 +63,8 @@
 ("land")
 ("setminus")
 ))
-
 (setq YaTeX::usepackage-alist-private '(
+("bussproofs")
 ("amsmath,amssymb")
 ("docmute")
 ("mysettings")
