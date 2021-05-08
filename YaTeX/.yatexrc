@@ -6,6 +6,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("jruby" 2)
 ("theoremstyle")
 ("tikzmark")
 ("intertext")
@@ -27,6 +28,10 @@
 ))
 
 (setq user-singlecmd-table '(
+("Rightarrow")
+("bot")
+("top")
+("Longleftrightarrow")
 ("sim")
 ("dotfill")
 ("subset")
@@ -63,6 +68,7 @@
 ("land")
 ("setminus")
 ))
+
 (setq YaTeX::usepackage-alist-private '(
 ("bussproofs")
 ("amsmath,amssymb")
