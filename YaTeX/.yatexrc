@@ -6,6 +6,8 @@
 ("cor")
 ))
 (setq user-section-table '(
+("refstepcounter")
+("ensuremath")
 ("jruby" 2)
 ("theoremstyle")
 ("tikzmark")
