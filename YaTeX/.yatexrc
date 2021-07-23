@@ -28,8 +28,8 @@
 ("alert")
 ("mathrel")
 ))
-
 (setq user-singlecmd-table '(
+("noLine")
 ("Rightarrow")
 ("bot")
 ("top")
