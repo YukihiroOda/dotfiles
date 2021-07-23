@@ -137,6 +137,12 @@ if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
 
+# cargo settings
+if [ -f $HOME/.cargo/env ]; then
+    . "$HOME/.cargo/env"
+fi
+
 #I like fortune
 type fortune >& /dev/null && fortune
+
 
