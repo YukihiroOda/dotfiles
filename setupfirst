@@ -19,13 +19,6 @@ then
 fi
 ln -sf "`pwd`/bash/addpath" "$HOME/bin/"
 
-#emacs settings
-if ! [ -d "$HOME/.emacs.d" ]
-then
-    cd "$HOME"
-    git clone git@github.com:YukihiroMasuoka/.emacs.d.git
-fi
-
 #nvim settings
 if ! [ -e "$HOME/.config" ] 
 then
@@ -45,3 +38,10 @@ fi
 
 #tmux
 ln -sf "`pwd`/tmux/.tmux.conf" "$HOME/"
+
+#emacs settings
+if ! [ -d "$HOME/.emacs.d" ]
+then
+    cd "$HOME"
+    git clone git@github.com:YukihiroMasuoka/.emacs.d.git
+fi
