@@ -143,9 +143,11 @@ if [ -f $HOME/.cargo/env ]; then
 fi
 
 # Virtualenvwrapper
-if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
-    . $HOME/.local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+    export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+    . /usr/local/bin/virtualenvwrapper.sh
 fi
 
 #I like fortune
