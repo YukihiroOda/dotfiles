@@ -6,6 +6,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("xrightarrow")
 ("refstepcounter")
 ("ensuremath")
 ("jruby" 2)
@@ -29,6 +30,7 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("checkmark")
 ("noLine")
 ("Rightarrow")
 ("bot")
