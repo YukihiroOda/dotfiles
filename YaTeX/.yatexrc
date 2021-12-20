@@ -30,6 +30,8 @@
 ("mathrel")
 ))
 (setq user-singlecmd-table '(
+("dagger")
+("bigwedge")
 ("checkmark")
 ("noLine")
 ("Rightarrow")
