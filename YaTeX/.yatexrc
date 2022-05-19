@@ -6,6 +6,7 @@
 ("cor")
 ))
 (setq user-section-table '(
+("fbox")
 ("xrightarrow")
 ("refstepcounter")
 ("ensuremath")
@@ -29,6 +30,7 @@
 ("alert")
 ("mathrel")
 ))
+
 (setq user-singlecmd-table '(
 ("dagger")
 ("bigwedge")
