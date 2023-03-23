@@ -150,5 +150,12 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     . /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# TeXLive!!
+if [ -d /usr/local/texlive/2023 ]; then
+ PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH" 
+ MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
+ INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+fi
+
 #I like fortune
 type fortune >& /dev/null && fortune
