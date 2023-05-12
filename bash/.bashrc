@@ -152,9 +152,9 @@ fi
 
 # TeXLive!!
 if [ -d /usr/local/texlive/2023 ]; then
- PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH" 
- MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"
- INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+ PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"; export PATH
+ MANPATH="/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH"; export MANPATH
+ INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"; export INFOPATH
 fi
 
 #I like fortune
