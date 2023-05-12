@@ -17,9 +17,19 @@ call dein#begin(s:dein_base)
 call dein#add(s:dein_src)
 
 " Your plugins go here:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('gianarb/coc-grammarly')
+call dein#add('justmao945/vim-clang')
+call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+call dein#add('rhysd/vim-grammarous')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-unimpaired')
+call dein#add('vim-latex/vim-latex')
 
+"
 " Finish Dein initialization (required)
 call dein#end()
 
@@ -39,3 +49,21 @@ endif
 "if dein#check_install()
 " call dein#install()
 "endif
+
+" To prohibit using arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+" %% as %:h
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/':'%%'
+" Display line numbers
+set number
+" Colorscheme 
+syntax enable
+colorscheme darkblue
+"matchit-------------------
+filetype plugin on
+runtime macros/matchit.vim
+"nrformats
+set nrformats=
