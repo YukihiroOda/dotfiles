@@ -32,7 +32,7 @@ fi
 
 if ! [ -e "$HOME/.cache/dein" ]
 then
-	curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > "$HOME/deininstaller.sh"
+	curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh > "$HOME/deininstaller.sh"
 	sh $HOME/deininstaller.sh "$HOME/.cache/dein"
 fi
 
