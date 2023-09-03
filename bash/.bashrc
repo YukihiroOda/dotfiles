@@ -123,7 +123,7 @@ stty stop undef
 if [ -f ~/bin/addpath ]; then
     . ~/bin/addpath
     # PATH
-    addunderdirtopath "$HOME/bin" "$HOME/.local/bin" "$HOME/.opam/4.10.0/bin" "$HOME/.opam/4.10.0/sbin"
+    addunderdirtopath "$HOME/bin" "$HOME/.local/bin" "$HOME/.opam/4.10.0/bin" "$HOME/.opam/4.10.0/sbin" "$HOME/.elan/env"
 fi
 
 # DEFAULT EDITOR
