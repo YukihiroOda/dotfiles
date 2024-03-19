@@ -157,5 +157,11 @@ if [ -d /usr/local/texlive/2023 ]; then
  INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"; export INFOPATH
 fi
 
+if [ -d /usr/local/texlive/2024 ]; then
+ PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"; export PATH
+ MANPATH="/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH"; export MANPATH
+ INFOPATH="/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"; export INFOPATH
+fi
+
 #I like fortune
 type fortune >& /dev/null && fortune
