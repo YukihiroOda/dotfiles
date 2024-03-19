@@ -6,6 +6,8 @@
 ("cor")
 ))
 (setq user-section-table '(
+("underset" 2)
+("operatorname")
 ("fbox")
 ("xrightarrow")
 ("refstepcounter")
@@ -32,6 +34,9 @@
 ))
 
 (setq user-singlecmd-table '(
+("bullet")
+("thickapprox")
+("hss")
 ("dagger")
 ("bigwedge")
 ("checkmark")
